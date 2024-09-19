@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color:aliceblue;
+    color: #ffff;
+}
+.background {
+    background-image: url('fig02.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    width: 100%; 
+}
+h1{
+    color: #0C2038;
+}
+
+
+
+header nav {
+    background-color:rgb(100, 119, 134);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    
+}
+
+header nav h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form {
+    display: flex;
+    justify-content: center;
+}
+
+.searchBox {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #0C2038;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover,.recipe button:hover,.recipe-close-btn:hover {
+    background-color: #ABBEE2;
+}
+
+.recipe-container {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin:10px auto;
+    padding: 20px;
+    place-items: center;
+    color: black;
+}
+
+.recipe{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color:#000000;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78 ,73 ,73 ,0.1), -5px 5px 10px rgba(34 ,34 ,34 ,0.5);
+    cursor: pointer;
+    max-width: 350px;
+    transition:transfrom 0.3 ease-in-out;
+
+}
+
+.recipe:hover{
+    transform: scale(1.02);
+}
+.recipe img{
+    height: 300px;
+}
+
+.recipe h3{
+    font-size: 24px;
+    margin-block: 5px;
+}
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin:5px 0;
+}
+
+.recipe span{
+    font-weight: 600;
+}
+
+.recipe button{
+    background-color: #0C2038;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 18px auto;
+    color: #fff;
+    border: none;
+}
+.recipe-close-btn{
+    position: absolute;
+    background-color: #0C2038;
+    color: #fff;
+    top: 20px;
+    right: 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+   
+}
+
+/* Recipe details */
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%,-50%);
+    background-color: #507dbb; 
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    transition: ease-in-out;
+    overflow-y: scroll;
+   
+}
+.recipe-detail-content{
+    padding: 25px;
+}
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.headIngredients{
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+.instructions{
+    padding-top: 8px;
+    font-size: 15px;
+    line-height: 25px;
+    white-space: pre-line;
+}
+.headInstruction{
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/*adding scrollbar*/
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background:#b0aeae;
+    border-radius: 16px; 
+    --webkit-border-radius:15px;
+
+}
+body::-webkit-scrollbar-track{
+    background: #5a5858;
+}
+
+
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+
+.searchBox {
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.searchBox:focus {
+    border: 2px solid #0C2038;
+    outline: none;
+}
+
+
+
